@@ -1,0 +1,94 @@
+﻿
+
+<div class="form-card survey p-4">
+    <div class="row">
+        <div class="col-7">
+            <h2 class="fs-title">Edita los bloques y las preguntas de tu encuesta:</h2>
+        </div>
+        <div class="col-5">
+            <h2 class="steps">Paso 2 - 4</h2>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <button class="btn btn-default pull-right" style="margin-bottom:1em" onclick="agregar()"><i class="fa fa-plus"></i>&nbsp;&nbsp; Añadir bloque</button>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table" id="editableTable">
+                <tbody class="addBlock">
+                    <tr>
+                        <th class="col-10">Bloque</th>
+                        <th>Acciones</th>
+                    </tr>
+                </tbody>
+                <tbody class="addBlock">
+                    <tr>
+                        <td data-field="name">Dominio</td>
+                        <th>
+                            <a class="button button-small edit" title="Edit">
+                                <i class="fa fa-pencil"></i>
+                            </a>
+
+                            <a class="button button-small edit" title="Delete">
+                                <i class="fa fa-trash"></i>
+                            </a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <br>
+                                    <button class="btn btn-default pull-right add-question"><i class="fa fa-plus"></i>&nbsp;&nbsp; Añadir preguntas</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-11" style="margin:0 auto; padding: 0 auto">
+                                    <table class="question">
+                                        <tbody class="addQuestion">
+                                            <tr>
+                                                <th class="col-12"></th>
+                                                <th></th>
+                                            </tr>
+                                        </tbody>
+                                        <tbody class="addQuestion">
+                                            <tr>
+
+                                                <td class="col-12" data-field="question">Pregunta</td>
+                                                <td>
+
+                                                    <a class="button button-small editQuestion" title="DeleteQuestion">
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                </td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    @Scripts.Render("~/Scripts/crudQuestion.js")
+
+
+</div>

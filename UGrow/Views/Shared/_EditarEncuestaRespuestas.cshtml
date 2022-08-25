@@ -1,0 +1,118 @@
+﻿<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@2.0.0/css/boxicons.min.css'>
+
+
+<style>
+    .answerSurvey .btn-default {
+        padding: 0.5em 2em !important;
+        width: auto;
+        background-color: #b21d69;
+        color: white;
+        font-weight: 600;
+    }
+
+    .answerSurvey input, .answerSurvey select {
+        max-width: none;
+    }
+    .bxs-star {
+        color:yellow;
+
+    }
+        .bxs-star::before {
+            width: 24px !important;
+            height: 24px !important;
+        }
+
+
+</style>
+
+<div class="form-card answerSurvey p-4">
+    <div class="row">
+        <div class="col-7">
+            <h2 class="fs-title">Edita las respuestas:</h2>
+        </div>
+        <div class="col-5">
+            <h2 class="steps">Paso 3 - 4</h2>
+        </div>
+    </div>
+    <div class="row px-4 py-3 justify-content-center">
+
+        <h4 class="fw-bold fs-5 border-bottom border-3">Bloque ****</h4>
+
+        <label class="pt-2 pb-3">Pregunta 1: **************************************************</label>
+        <div class="col-12 col-md-8">
+            <div class="row justify-content-center">
+                <select name="answerQ1" id="answerQ1" class="form-select form-select-lg mb-3" style="width:100%">
+                    <option selected>Seleccione</option>
+                    <option value="typeMultiple()">Opción múltiple</option>
+                    <option value="typeOpen()">Pregunta abierta</option>
+                    <option value="typeMatrix()">Matriz</option>
+                    <option value="typeDichotomous()">Dicotómica</option>
+                    <option value="typeScale()">Escala</option>
+
+                </select>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 justify-content-center ">
+            <button id="btnAnswer" type="button" class="btn btn-default pull-right my-2" onclick="Multiple()"> Generar</button>
+        </div>
+
+
+        <div class="mb-3 border-bottom" id="typeAnswerContainerQ1">
+            <p>Tipo:<span id="textQ1"></span></p>
+
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+<script>
+
+
+
+    $('#answerQ1').change(function () {
+        
+        $("#btnAnswer").attr("onclick", ($('#answerQ1').val()) );
+
+
+
+        var txt = $('#answerQ1 :selected').text();
+        $("#textQ1").html(txt);
+
+    });
+
+
+    function typeMultiple() {
+        $("#typeAnswerContainerQ1 .answers-box").remove();
+        jQuery("#typeAnswerContainerQ1").append('<div class="row answers-box"><div class="input-group row my-3"><div class="input-group-prepend col-3 col-md-2 p-0"><div class="input-group-text w-100"><input type="radio" name="answer"></div> </div><div class="col-9 col-md-10  p-0"><input class="form-control answer-text" type="text" style="width:100%"></div></div><div class="input-group row my-3"><div class="input-group-prepend col-3 col-md-2 p-0"><div class="input-group-text w-100"><input type="radio" name="answer"></div></div><div class="col-9 col-md-10 p-0"><input class="form-control answer-text" type="text" style="width:100%"></div></div><div class="input-group row my-3"><div class="input-group-prepend col-3 col-md-2 p-0"><div class="input-group-text w-100"><input type="radio" name="answer"></div></div><div class="col-9 col-md-10 p-0"><input class="form-control answer-text" type="text" style="width:100%"></div></div><div class="input-group row my-3"><div class="input-group-prepend col-3 col-md-2 p-0"><div class="input-group-text w-100"><input type="radio" name="answer"></div></div><div class="col-9 col-md-10 p-0"><input class="form-control answer-text" type="text" style="width:100%"></div></div> </div>')
+    };
+
+    function typeDichotomous() {
+        $("#typeAnswerContainerQ1 .answers-box").remove();
+        jQuery("#typeAnswerContainerQ1").append('<div class="row answers-box"><div class="input-group my-3 col-12 col-md-6"><div class="input-group-prepend col-3 col-md-2 p-0"><div class="input-group-text w-100"><input type="radio" name="answer"></div></div><div class="col-9 col-md-10  p-0"><input class="form-control answer-text" type="text" style="width:100%" value="Si"></div></div><div class="input-group my-3 col-12 col-md-6"><div class="input-group-prepend col-3 col-md-2 p-0"><div class="input-group-text w-100"><input type="radio" name="answer" ></div></div><div class="col-9 col-md-10 p-0"><input class="form-control answer-text" type="text" value="No" style="width:100%"> </div> </div></div>')
+    };
+
+    function typeScale() {
+        $("#typeAnswerContainerQ1 .answers-box").remove();
+        jQuery("#typeAnswerContainerQ1").append('<div class="row answers-box"><div class="input-group row my-3"><div class="input-group-prepend col-3 col-md-2 p-0"><div class="input-group-text w-100 justify-content-center">1 <i class="ms-2 bx bxs-star"></i></div></div> <div class="col-9 col-md-10  p-0"><input class="form-control answer-text" type="text" style="width:100%"></div></div><div class="input-group row my-3"><div class="input-group-prepend col-3 col-md-2 p-0"><div class="input-group-text w-100 justify-content-center">2 <i class="ms-2 bx bxs-star"></i></div> </div><div class="col-9 col-md-10 p-0"><input class="form-control answer-text" type="text" style="width:100%"></div></div><div class="input-group row my-3"><div class="input-group-prepend col-3 col-md-2 p-0"><div class="input-group-text w-100 justify-content-center">3 <i class="ms-2 bx bxs-star"></i></div></div><div class="col-9 col-md-10 p-0"><input class="form-control answer-text" type="text" style="width:100%"> </div></div><div class="input-group row my-3"> <div class="input-group-prepend col-3 col-md-2 p-0"><div class="input-group-text w-100 justify-content-center">4 <i class="ms-2 bx bxs-star"></i></div></div><div class="col-9 col-md-10 p-0"><input class="form-control answer-text" type="text" style="width:100%"></div></div><div class="input-group row my-3"><div class="input-group-prepend col-3 col-md-2 p-0"><div class="input-group-text w-100 justify-content-center">5 <i class="ms-2 bx bxs-star"></i></div></div><div class="col-9 col-md-10 p-0"> <input class="form-control answer-text" type="text" style="width:100%"> </div></div></div>')
+    };
+
+    function typeOpen() {
+        $("#typeAnswerContainerQ1 .answers-box").remove();
+        jQuery("#typeAnswerContainerQ1").append('<div class="row answers-box"><div class="input-group row my-3"> <div class="col-12  p-0"><input class="form-control answer-text" type="text" style="width:100%"></div></div>')
+    };
+
+    function typeMatrix() {
+        $("#typeAnswerContainerQ1 .answers-box").remove();
+        jQuery("#typeAnswerContainerQ1").append('')
+    };
+
+
+
+</script>

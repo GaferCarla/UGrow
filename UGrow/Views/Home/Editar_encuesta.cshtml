@@ -1,0 +1,219 @@
+﻿
+@{
+    ViewBag.Title = "Editar_encuesta";
+    @Styles.Render("~/Content/tableGeneral.css");
+}
+
+@section dataTableStyle {
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link href="~/lib/datatables.net-bs5/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    <link rel='stylesheet' href='https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@2.0.0/css/boxicons.min.css'>
+}
+
+
+
+
+<div class="container">
+    <div class="main">
+        <h1>Lista de encuestas</h1>
+
+        <div class="container crud-table" ng-app="myApp" ng-controller="namesCtrl">
+            <div class="clearfix">
+
+                <div class="col-12 col-md-6 my-3">
+                    <a class="btn btn-success" href="@Url.Action("Añadir_encuesta","Home")">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-plus" viewBox="0 0 16 16">
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                        </svg>
+                        Añadir encuesta
+
+                    </a>
+                </div>
+
+
+            </div>
+
+            <div class="container">
+                <div class="row py-5">
+                    <div class="col-12">
+                        <table id="example" class="table table-hover responsive nowrap">
+                            <thead>
+                                <tr>
+                                    <th class="w-75 w-sm-50" data-priority="1">Título</th>
+                                    <th>Fecha de creación</th>
+                                    <th>Fecha de término</th>
+                                    <th>Aplicación</th>
+                                    <th data-priority="1">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tipo  1</td>
+                                    <td>12/12/2021</td>
+                                    <td>01/02/2022</td>
+                                    <td>
+                                        <div class="badge badge-success badge-success-alt">Terminado</div>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top"
+                                                   title="Actions"></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <a class="dropdown-item" href="@Url.Action("Editar_datos_cuestionario","Home")"><i class="bx bxs-pencil mr-2"></i> Editar</a>
+                                                <a class="dropdown-item text-success" href="#duplicateModal" data-toggle="modal"><i class="bx bxs-copy mr-2"></i>Duplicar</a>
+
+                                                <a class="dropdown-item text-danger" href="#deleteModal" data-toggle="modal"><i class="bx bxs-trash mr-2"></i> Eliminar</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Tipo  B</td>
+                                    <td>12/11/2021</td>
+                                    <td>01/03/2022</td>
+                                    <td>
+                                        <div class="badge badge-warning badge-warning-alt">En proceso</div>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top"
+                                                   title="Actions"></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <a class="dropdown-item" href="@Url.Action("Editar_datos_cuestionario","Home")"><i class="bx bxs-pencil mr-2"></i> Editar</a>
+                                                <a class="dropdown-item text-success" href="#duplicateModal" data-toggle="modal"><i class="bx bxs-copy mr-2"></i>Duplicar</a>
+
+                                                <a class="dropdown-item text-danger" href="#deleteModal" data-toggle="modal"><i class="bx bxs-trash mr-2"></i> Eliminar</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Tipo  C</td>
+                                    <td>12/08/2021</td>
+                                    <td>01/01/2022</td>
+                                    <td>
+                                        <div class="badge badge-secondary badge-secondary-alt">Programado</div>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top"
+                                                   title="Actions"></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <a class="dropdown-item" href="@Url.Action("Editar_datos_cuestionario","Home")"><i class="bx bxs-pencil mr-2"></i> Editar</a>
+                                                <a class="dropdown-item text-success" href="#duplicateModal" data-toggle="modal"><i class="bx bxs-copy mr-2"></i>Duplicar</a>
+
+                                                <a class="dropdown-item text-danger" href="#deleteModal" data-toggle="modal"><i class="bx bxs-trash mr-2"></i> Eliminar</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+<div id="deleteModal" class="modal fade fadeInLeft" data-animation-in="fadeInLeft">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h4 class="modal-title">Eliminar datos</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Estás seguro que quieres eliminar los datos de esta persona?</p>
+                    <p class="text-warning"><small>Esta acción no podrá ser deshecha.</small></p>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-secondary" data-dismiss="modal" value="Cancelar">
+                    <input type="submit" class="btn btn-danger" value="Eliminar">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="duplicateModal" class="modal fade fadeInLeft" data-animation-in="fadeInLeft">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                  
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Estás a punto de duplicar este cuestionario en la base de datos</p>
+                    <p class="text-secondary"><small>¿Estás seguro de hacer una copia o sólo buscas editar?</small></p>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-secondary" data-dismiss="modal" value="Cancelar">
+                    <input type="submit" class="btn btn-success" value="Duplicar">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section dataTableScripts {
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js'></script>
+    <script src="~/lib/datatables.net/jquery.dataTables.min.js"></script>
+    <script src='https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js'></script>
+    <script src="~/lib/datatables.net-bs5/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"></script>
+
+}
+
+
+
+<script>
+    $(document).ready(function () {
+        $("#example").DataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
+            },
+
+            aaSorting: [],
+            responsive: true,
+
+            columnDefs: [
+                {
+                    responsivePriority: 1,
+                    targets: 0
+                },
+                {
+                    responsivePriority: 2,
+                    targets: -1
+                }
+            ]
+        });
+
+        $(".dataTables_filter input")
+            .attr("placeholder", "Search here...")
+            .css({
+                width: "300px",
+                display: "inline-block"
+            });
+
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
+
+

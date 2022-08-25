@@ -1,0 +1,49 @@
+﻿<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
+<script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
+<div class="form-card survey p-4">
+    <div class="row">
+        <div class="col-7">
+            <h2 class="fs-title">Datos de la encuesta:</h2>
+        </div>
+        <div class="col-5">
+            <h2 class="steps">Paso 1 - 4</h2>
+        </div>
+    </div>
+
+    <div class="row px-4 mt-3 mb-2">
+        <label>Título de la encuesta</label>
+        <input type="text" required>
+    </div>
+
+    <div class="row px-4 mb-4">
+        <label>Selecciona los roles</label>
+        <select id="choices-multiple-remove-button" placeholder="Select up to 3 tags" multiple>
+            <option value="rol1" onclick="filterSelection('rol1')">Rol 1</option>
+            <option value="rol2">Rol 2</option>
+            <option value="rol3">Rol 3</option>
+            <option value="rol4">Rol 4</option>
+            <option value="rol5">Maestro</option>
+
+        </select>
+    </div>
+
+    <div class="row px-4 mb-4">
+        <label>Selecciona los grupos</label>
+        <select id="choices-multiple-remove-button" placeholder="Select up to 3 tags" multiple>
+            <option value="group1" onclick="filterSelection('group1')">Grupo 1</option>
+            <option value="group2">Grupo 2</option>
+            <option value="group3">Grupo 3</option>
+            <option value="group4">Grupo 4</option>
+
+        </select>
+
+
+    </div>
+
+
+</div>
+
+<script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+@Scripts.Render("~/Scripts/multipleSelect.js")

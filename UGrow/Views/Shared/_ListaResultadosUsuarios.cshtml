@@ -1,0 +1,602 @@
+﻿
+
+
+
+        <div class="container crud-table" ng-app="myApp" ng-controller="namesCtrl">
+
+
+            <div class="container">
+                <div class="row py-5">
+                    <div class="col-12">
+                        <table id="example" class="table table-hover responsive nowrap">
+                            <thead>
+                                <tr>
+                                    <th class="w-75 w-sm-50" data-priority="1">Nombre</th>
+                                    <th>Empresa</th>
+                                    <th>Departamento</th>
+                                    <th>Rol</th>
+                                    <th>Grupo</th>
+                                    <th>Acceso</th>
+                                    <th data-priority="1">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="w-75 w-sm-50">
+                                        <a href="#">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar avatar-blue me-3">EB</div>
+
+                                                <div class=" ">
+                                                    <p class="font-weight-bold mb-0">Barcos Emmanuel</p>
+                                                    <p class="text-muted mb-0">barcos@example.com</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class=" ">
+                                            <p class="font-weight-bold mb-0">Walt Mark</p>
+                                            <p class="text-muted mb-0">Guadalajara</p>
+                                        </div>
+
+                                    </td>
+                                    <td>Ventas</td>
+                                    <td>Gerente</td>
+                                    <td>Grupo 1</td>
+                                    <td>
+                                        <div class="badge badge-success badge-success-alt">Acceso</div>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top"
+                                                   title="Actions"></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <a class="dropdown-item" href="@Url.Action("myIndividualResult","Home")"><i class="bx bx-revision mr-2"></i> Ver resultados</a>
+                                                <a class="dropdown-item text-danger" href="#deleteModal" data-toggle="modal"><i class="bx bxs-trash mr-2"></i> Eliminar</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar avatar-pink me-3">JR</div>
+
+                                                <div class=" ">
+                                                    <p class="font-weight-bold mb-0">Rodriguez Julián</p>
+                                                    <p class="text-muted mb-0">julian@example.com</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class=" ">
+                                            <p class="font-weight-bold mb-0">Oxxo</p>
+                                            <p class="text-muted mb-0">Guadalajara</p>
+                                        </div>
+
+                                    </td>
+                                    <td>Administración</td>
+                                    <td>Cajero</td>
+                                    <td>Grupo 2</td>
+                                    <td>
+                                        <div class="badge bg-danger badge-danger-alt">Denegado</div>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="...">
+                                                <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top" title="Actions"></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <a class="dropdown-item" href="@Url.Action("myIndividualResult","Home")"><i class="bx bx-revision mr-2"></i> Ver resultados</a>
+                                                <a class="dropdown-item text-danger" href="#deleteModal" data-toggle="modal"><i class="bx bxs-trash mr-2"></i> Eliminar</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar avatar-blue me-3">EB</div>
+
+                                                <div class=" ">
+                                                    <p class="font-weight-bold mb-0">Emmanuel Barcos</p>
+                                                    <p class="text-muted mb-0">barcos@example.com</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+
+                                    <td>
+                                        <div class=" ">
+                                            <p class="font-weight-bold mb-0">Soriana</p>
+                                            <p class="text-muted mb-0">Monterrey</p>
+                                        </div>
+
+                                    </td>
+                                    <td>Ventas</td>
+                                    <td>Asesor</td>
+                                    <td>Grupo 3</td>
+                                    <td>
+                                        <div class="badge badge-success badge-success-alt">Acceso</div>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top"
+                                                   title="Actions"></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <a class="dropdown-item" href="@Url.Action("myIndividualResult","Home")"><i class="bx bx-revision mr-2"></i> Ver resultados</a>
+                                                <a class="dropdown-item text-danger" href="#deleteModal" data-toggle="modal"><i class="bx bxs-trash mr-2"></i> Eliminar</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar avatar-pink me-3">JR</div>
+
+                                                <div class=" ">
+                                                    <p class="font-weight-bold mb-0">Julian Rodriguez</p>
+                                                    <p class="text-muted mb-0">julian@example.com</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class=" ">
+                                            <p class="font-weight-bold mb-0">Soriana</p>
+                                            <p class="text-muted mb-0">Guadalajara</p>
+                                        </div>
+
+                                    </td>
+                                    <td>Ventas</td>
+                                    <td>Asesor</td>
+                                    <td>Grupo 3</td>
+                                    <td>
+                                        <div class="badge bg-danger badge-danger-alt">Denegado</div>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="...">
+                                                <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top" title="Actions"></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <a class="dropdown-item" href="@Url.Action("myIndividualResult","Home")"><i class="bx bx-revision mr-2"></i> Ver resultados</a>
+                                                <a class="dropdown-item text-danger" href="#deleteModal" data-toggle="modal"><i class="bx bxs-trash mr-2"></i> Eliminar</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar avatar-blue me-3">EB</div>
+
+                                                <div class="">
+                                                    <p class="font-weight-bold mb-0">Emmanuel Barcos</p>
+                                                    <p class="text-muted mb-0">barcos@example.com</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class=" ">
+                                            <p class="font-weight-bold mb-0">Santander</p>
+                                            <p class="text-muted mb-0">Veracruz</p>
+                                        </div>
+
+                                    </td>
+                                    <td>Administración</td>
+                                    <td>Cajero</td>
+                                    <td>Grupo 2</td>
+                                    <td>
+                                        <div class="badge badge-success badge-success-alt">Acceso</div>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top"
+                                                   title="Actions"></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <a class="dropdown-item" href="@Url.Action("myIndividualResult","Home")"><i class="bx bx-revision mr-2"></i> Ver resultados</a>
+                                                <a class="dropdown-item text-danger" href="#deleteModal" data-toggle="modal"><i class="bx bxs-trash mr-2"></i> Eliminar</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar avatar-pink me-3">JR</div>
+
+                                                <div class="">
+                                                    <p class="font-weight-bold mb-0">Julian Rodriguez</p>
+                                                    <p class="text-muted mb-0">julian@example.com</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class=" ">
+                                            <p class="font-weight-bold mb-0">FEMSA</p>
+                                            <p class="text-muted mb-0">Monterrey</p>
+                                        </div>
+
+                                    </td>
+                                    <td>Ventas</td>
+                                    <td>Gerente</td>
+                                    <td>Grupo 1</td>
+                                    <td>
+                                        <div class="badge bg-danger badge-danger-alt">Denegado</div>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="...">
+                                                <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top" title="Actions"></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <a class="dropdown-item" href="@Url.Action("myIndividualResult","Home")"><i class="bx bx-revision mr-2"></i> Ver resultados</a>
+                                                <a class="dropdown-item text-danger" href="#deleteModal" data-toggle="modal"><i class="bx bxs-trash mr-2"></i> Eliminar</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar avatar-blue me-3">EB</div>
+
+                                                <div class="">
+                                                    <p class="font-weight-bold mb-0">Emmanuel Barcos</p>
+                                                    <p class="text-muted mb-0">barcos@example.com</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class=" ">
+                                            <p class="font-weight-bold mb-0">Santander</p>
+                                            <p class="text-muted mb-0">Puebla</p>
+                                        </div>
+
+                                    </td>
+                                    <td>Ventas</td>
+                                    <td>Gerente</td>
+                                    <td>Grupo 1</td>
+                                    <td>
+                                        <div class="badge badge-success badge-success-alt">Acceso</div>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top"
+                                                   title="Actions"></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <a class="dropdown-item" href="@Url.Action("myIndividualResult","Home")"><i class="bx bx-revision mr-2"></i> Ver resultados</a>
+                                                <a class="dropdown-item text-danger" href="#deleteModal" data-toggle="modal"><i class="bx bxs-trash mr-2"></i> Eliminar</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar avatar-pink me-3">JR</div>
+
+                                                <div class="">
+                                                    <p class="font-weight-bold mb-0">Julian Rodriguez</p>
+                                                    <p class="text-muted mb-0">julian@example.com</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class=" ">
+                                            <p class="font-weight-bold mb-0">Oxxo</p>
+                                            <p class="text-muted mb-0">Veracruz</p>
+                                        </div>
+
+                                    </td>
+                                    <td>Administración</td>
+                                    <td>Cajero</td>
+                                    <td>Grupo 2</td>
+                                    <td>
+                                        <div class="badge bg-danger badge-danger-alt">Denegado</div>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="...">
+                                                <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top" title="Actions"></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <a class="dropdown-item" href="@Url.Action("myIndividualResult","Home")"><i class="bx bx-revision mr-2"></i> Ver resultados</a>
+                                                <a class="dropdown-item text-danger" href="#deleteModal" data-toggle="modal"><i class="bx bxs-trash mr-2"></i> Eliminar</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar avatar-blue me-3">EB</div>
+
+                                                <div class="">
+                                                    <p class="font-weight-bold mb-0">Emmanuel Barcos</p>
+                                                    <p class="text-muted mb-0">barcos@example.com</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class=" ">
+                                            <p class="font-weight-bold mb-0">Santander</p>
+                                            <p class="text-muted mb-0">Veracruz</p>
+                                        </div>
+
+                                    </td>
+                                    <td>Administración</td>
+                                    <td>Cajero</td>
+                                    <td>Grupo 2</td>
+                                    <td>
+                                        <div class="badge badge-success badge-success-alt">Acceso</div>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top"
+                                                   title="Actions"></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <a class="dropdown-item" href="@Url.Action("myIndividualResult","Home")"><i class="bx bx-revision mr-2"></i> Ver resultados</a>
+                                                <a class="dropdown-item text-danger" href="#deleteModal" data-toggle="modal"><i class="bx bxs-trash mr-2"></i> Eliminar</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar avatar-pink me-3">JR</div>
+
+                                                <div class="">
+                                                    <p class="font-weight-bold mb-0">Julian Rodriguez</p>
+                                                    <p class="text-muted mb-0">julian@example.com</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class=" ">
+                                            <p class="font-weight-bold mb-0">Oxxo</p>
+                                            <p class="text-muted mb-0">Veracruz</p>
+                                        </div>
+
+                                    </td>
+                                    <td>Administración</td>
+                                    <td>Cajero</td>
+                                    <td>Grupo 2</td>
+                                    <td>
+                                        <div class="badge bg-danger badge-danger-alt">Denegado</div>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="...">
+                                                <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top" title="Actions"></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <a class="dropdown-item" href="@Url.Action("myIndividualResult","Home")"><i class="bx bx-revision mr-2"></i> Ver resultados</a>
+                                                <a class="dropdown-item text-danger" href="#deleteModal" data-toggle="modal"><i class="bx bxs-trash mr-2"></i> Eliminar</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar avatar-blue me-3">EB</div>
+
+                                                <div class="">
+                                                    <p class="font-weight-bold mb-0">Emmanuel Barcos</p>
+                                                    <p class="text-muted mb-0">barcos@example.com</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class=" ">
+                                            <p class="font-weight-bold mb-0">FEMSA</p>
+                                            <p class="text-muted mb-0">Veracruz</p>
+                                        </div>
+
+                                    </td>
+                                    <td>Administración</td>
+                                    <td>Cajero</td>
+                                    <td>Grupo 4</td>
+                                    <td>
+                                        <div class="badge badge-success badge-success-alt">Acceso</div>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top"
+                                                   title="Actions"></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <a class="dropdown-item" href="@Url.Action("myIndividualResult","Home")"><i class="bx bx-revision mr-2"></i> Ver resultados</a>
+                                                <a class="dropdown-item text-danger" href="#deleteModal" data-toggle="modal"><i class="bx bxs-trash mr-2"></i> Eliminar</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar avatar-pink me-3">JR</div>
+
+                                                <div class="">
+                                                    <p class="font-weight-bold mb-0">Julian Rodriguez</p>
+                                                    <p class="text-muted mb-0">julian@example.com</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class=" ">
+                                            <p class="font-weight-bold mb-0">Office</p>
+                                            <p class="text-muted mb-0">Veracruz</p>
+                                        </div>
+
+                                    </td>
+                                    <td>Administración</td>
+                                    <td>Cajero</td>
+                                    <td>Grupo 4</td>
+                                    <td>
+                                        <div class="badge bg-danger badge-danger-alt">Denegado</div>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="...">
+                                                <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top" title="Actions"></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <a class="dropdown-item" href="@Url.Action("myIndividualResult","Home")"><i class="bx bx-revision mr-2"></i> Ver resultados</a>
+                                                <a class="dropdown-item text-danger" href="#deleteModal" data-toggle="modal"><i class="bx bxs-trash mr-2"></i> Eliminar</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar avatar-blue me-3">EB</div>
+
+                                                <div class="">
+                                                    <p class="font-weight-bold mb-0">Emmanuel Barcos</p>
+                                                    <p class="text-muted mb-0">barcos@example.com</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class=" ">
+                                            <p class="font-weight-bold mb-0">Soriana</p>
+                                            <p class="text-muted mb-0">Veracruz</p>
+                                        </div>
+
+                                    </td>
+                                    <td>Administración</td>
+                                    <td>Cajero</td>
+                                    <td>Grupo 4</td>
+                                    <td>
+                                        <div class="badge badge-success badge-success-alt">Acceso</div>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top"
+                                                   title="Actions"></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <a class="dropdown-item" href="@Url.Action("myIndividualResult","Home")"><i class="bx bx-revision mr-2"></i> Ver resultados</a>
+                                                <a class="dropdown-item text-danger" href="#deleteModal" data-toggle="modal"><i class="bx bxs-trash mr-2"></i> Eliminar</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar avatar-pink me-3">JR</div>
+
+                                                <div class="">
+                                                    <p class="font-weight-bold mb-0">Julian Rodriguez</p>
+                                                    <p class="text-muted mb-0">julian@example.com</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <div class=" ">
+                                            <p class="font-weight-bold mb-0">Heneken</p>
+                                            <p class="text-muted mb-0">Monterrey</p>
+                                        </div>
+
+                                    </td>
+                                    <td>Administración</td>
+                                    <td>Cajero</td>
+                                    <td>Grupo 4</td>
+                                    <td>
+                                        <div class="badge bg-danger badge-danger-alt">Denegado</div>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="...">
+                                                <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top" title="Actions"></i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                                <a class="dropdown-item" href="@Url.Action("myIndividualResult","Home")"><i class="bx bx-revision mr-2"></i> Ver resultados</a>
+                                                <a class="dropdown-item text-danger" href="#deleteModal" data-toggle="modal"><i class="bx bxs-trash mr-2"></i> Eliminar</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+<div id="deleteModal" class="modal fade fadeInLeft" data-animation-in="fadeInLeft">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h4 class="modal-title">Eliminar datos</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Estás seguro que quieres eliminar los datos de esta persona?</p>
+                    <p class="text-warning"><small>Esta acción no podrá ser deshecha.</small></p>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-secondary" data-dismiss="modal" value="Cancelar">
+                    <input type="submit" class="btn btn-danger" value="Eliminar">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+

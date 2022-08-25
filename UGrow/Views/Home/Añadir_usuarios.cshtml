@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "Añadir usuarios";
+    @Styles.Render("~/Content/styleAddUsser.css");
+
+
+
+
+}
+
+<style>
+
+    #nav-tab .nav-link {
+        color: #777777;
+    }
+
+        #nav-tab .nav-link:hover {
+            color: #b21d69 !important;
+        }
+
+    #nav-tab.active, #nav-tab .active {
+        color: #b21d69 !important;
+    }
+
+    .lgbtn {
+        padding: 15px;
+        font-size: 18px;
+        text-decoration: none;
+        background-color: green;
+        color: #fff;
+        position: relative;
+        display: inline-block;
+    }
+
+        .lgbtn:active {
+            transform: translate(0px, 5px);
+            -webkit-transform: translate(0px, 5px);
+            box-shadow: 0px 1px 0px 0px;
+        }
+
+    .green {
+        background-color: green;
+        box-shadow: 3px 5px 5px #888888;
+        border-radius: 2px;
+        transition: all .5s ease-in-out;
+    }
+
+        .green:hover {
+            background-color: #b21d69;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+
+</style>
+
+<div class="container py-4 my-3 ">
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link col-6 fw-bold active" id="nav-usser-tab" data-bs-toggle="tab" data-bs-target="#nav-usser" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Añadir usuario</button>
+            <button class="nav-link col-6 fw-bold" id="nav-import-tab" data-bs-toggle="tab" data-bs-target="#nav-import" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Importar usuarios</button>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active p-5 " id="nav-usser" role="tabpanel" aria-labelledby="nav-home-tab">
+            @Html.Partial("_AñadirUsuarios")
+
+            <div class="grid row px-3">
+                <div class="col-md-6 px-md-4 my-5 "><div class="required-msg">Campos requeridos</div></div>
+
+                <div class="col-md-6 px-md-4 my-5 ">
+                    <button class="btn-grid" type="submit" style="background-color: green; color: white; width:100%">
+                        <span class="back">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                        </span>
+                        <span class="front">Actualizar</span>
+                    </button>
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="tab-pane fade p-5" id="nav-import" role="tabpanel" aria-labelledby="nav-profile-tab">
+            @Html.Partial("_MultipleAddUsers")
+
+            <div class="grid row justify-content-center px-3">
+
+                <div class="col-md-6 px-md-4 my-5 ">
+                    <button class="btn-grid" type="submit" style="background-color: green; color: white; width:90%">
+                        <span class="back">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                            </svg>
+                        </span>
+                        <span class="front">Actualizar</span>
+                    </button>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
